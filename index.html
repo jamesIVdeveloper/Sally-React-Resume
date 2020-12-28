@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Resume</title>
+</head>
+<body>
+    <div id='app-root'></div>
+
+<!-- scripts -->
+
+<script src='https://unpkg.com/react@16.7.0/umd/react.production.min.js'></script>
+<script src='https://unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js'></script>
+<script src='https://unpkg.com/babel-standalone@6/babel.min.js'></script>
+
+<!-- code script -->
+
+<script type='text/babel'>
+    function App(props) {
+        console.log(props)
+        return (
+            <div>
+                <header>
+                    <h1 className='title'>About Me</h1>
+                </header>
+                <main>
+                    <section id='introduction'>
+                        <h2>Introduction</h2>
+                        <p>Hello, my name is Sally, and I am a Web Developer.  Below, you will find more information about me, including my education, work experience, and contact information.</p>
+                    </section>
+                    <section id='education'>
+                        <h2>Education</h2>
+                        <p>I have studied at:</p>
+                        <ul>
+                            <li>Notre Dame University</li>
+                            <li>The University of Chicago</li>
+                        </ul>
+                    </section>
+                    <section id='work'>
+                        <h2>Work Experience</h2>
+                        <p>I have worked at:</p>
+                        <ul>
+                            <li>Github as an Engineer during 2018 and there I worked with a team of engineers to ensure the reliability and scalability of the databases that power Github.</li>
+                            <li>Jetbrains as Project Manager from 2019 to present.  My work consists of managing a team of developers to create projects.</li>
+                        </ul>
+                    </section>
+                    <section id='contact'>
+                        <h2>Contact Me</h2>
+                        <address id='contact-info'>
+                            <p>My name is Sally</p>
+                            <p>My email is: <a href="mailto://sally@InternetExplorer.old">sally@InternetExplorer.old</a></p>
+                            <p>My phone number is: <a href="tel:+34100572415">+341-005-72415</a></p>
+                            <div>
+                                <img src="sally-resume.jpg" alt="Picture of me"></img>
+                            </div>
+                        </address>
+                    </section>
+                </main>
+            </div>
+        );
+    }
+
+    ReactDOM.render(
+        <App className='react-app'></App>,
+        document.querySelector('#app-root')
+    );
+</script>
+
+</body>
+</html>
